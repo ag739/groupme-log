@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{c}}</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'onthisday/style.css' %}" />
+  <script type="text/javascript" src="{% static 'onthisday/main.js' %}"></script>
+</head>
+<body>
+  <div class="content" id="content">
+    <div class="center-form" id="center-form">
+      <label class="label" for="access_token">Access Token</label>
+      <button class="help-button" onclick="$('#info').slideToggle();">?</button>
+      <span class="help">Click to learn about how to get your access token</span><br>
+      <div id="info" class="info">
+        <p>Log into your GroupMe account <a href="https://dev.groupme.com/">here</a> and then click on the button on the upper right hand corner that says "Access Token". Don't worry, we don't store any of your information :)</p>
+      </div>
+      <input type="text" name="access_token" id="access_token" class="text-input">
+      <button class="btn" onclick="submitAT()">GO</button>
+      <p id="error">There was an error. Are you sure you submitted the correct access token?</p>
+    </div>
+
+    <div class="group-list" id="group-list">
+    </div>
+
+    <div class="message-list" id="message-list">
+    </div>
+  </div>
+</body>
+</html>
