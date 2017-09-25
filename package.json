@@ -1,0 +1,32 @@
+{
+  "name": "on-this-day",
+  "version": "1.0.0",
+  "description": "Django Rest Framework API backend with React frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "django",
+    "django",
+    "rest",
+    "framework",
+    "reactjs",
+    "webpack",
+    "babel"
+  ],
+  "author": "Ariel Gleitman",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "jquery": "^3.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "webpack": "^3.6.0",
+    "webpack-bundle-tracker": "^0.2.0"
+  }
+}
