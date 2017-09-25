@@ -1,0 +1,252 @@
+/******************
+ * GENERAL STYLES *
+ ******************/
+
+a {
+  color: #00aff0;
+  text-decoration: none;
+}
+
+body {
+  color: #333;
+  font-family: Futura, Arial, sans-serif;
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+}
+
+.main-content > div {
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+  width: 100%;
+}
+
+/**************
+ * EnterToken *
+ **************/
+
+.button {
+  background-color: #fafafa;
+  border: solid 1px #d4d4d4;
+  border-radius: 5px;
+  color: #666;
+  cursor: pointer;
+  padding: 7px 9px;
+}
+
+.button:hover {
+  background-color: #f7f7f7;
+}
+
+.enter-token {
+  align-items: center;
+  background-color: #00aff0;
+  color: #fff;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+}
+
+.enter-token > div > * {
+  margin: 0 5px;
+}
+
+.hamburger {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  stroke: #fff;
+  stroke-width: 3px;
+}
+
+@media screen and (min-width: 800px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger.active {
+  background-color: #fff;
+  stroke: #00aff0;
+}
+
+.hamburger.hide {
+  display: none;
+}
+
+.input {
+  padding: 6px;
+}
+
+.tooltip {
+  background-color: #0b2f47;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 10px;
+  opacity: 0; 
+  padding: 10px;
+  position: absolute;
+  right: 55px;
+  text-align: center;
+  top: 60px;
+  transition: opacity 1s;
+  width: 200px;
+  z-index: 1;
+}
+
+.tooltip::after {
+  content: "";
+  border-color: transparent transparent #0b2f47 transparent;
+  border-style: solid;
+  border-width: 5px;
+  bottom: 100%;
+  left: 20px;
+  margin-left: -5px;
+  position: absolute;
+}
+
+.tooltip-div {
+  display: inline;
+}
+
+.tooltip-div:hover .tooltip {
+  opacity: 1;
+}
+
+.tooltip-help {
+  border: 1px solid #fff;
+  border-radius: 8px;
+  bottom: 2px;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 2px 5px;
+  position: relative;
+}
+
+/*************
+ * GroupList *
+ *************/
+
+.group-div {
+  align-items: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  flex-basis: 100%;
+  min-height: 50px;
+  padding: 20px;
+}
+
+.group-div:nth-of-type(2n) {
+  border-bottom-color: #e5e5e5;
+  border-top-color: #e5e5e5;
+}
+
+.group-img {
+  margin: 0 20px 0 0;
+  transition: 500ms width ease;
+  width: 150px;
+}
+
+.group-list {
+  flex-basis: 100%;
+  transition: 500ms flex-basis ease, 500ms margin ease;
+}
+
+.group-list.messages-active {
+  display: none;
+}
+
+.group-list.messages-active.mobile-active {
+  background-color: #f0f0f0;
+  display: block;
+  position: absolute;
+}
+
+@media screen and (min-width: 800px) {
+  .group-list.messages-active {
+    display: block;
+    flex-basis: 25%;
+    margin: 0 40px 0 0;
+  }
+
+  .group-list.messages-active.mobile-active {
+    background-color: #fff;
+    position: static;
+  }
+
+  .group-list.messages-active .group-div .group-img {
+    width: 50px;
+  }
+
+  .group-list.messages-active .group-div .group-name {
+    font-size: 16px;
+  }
+}
+
+.group-name {
+  font-size: 24px;
+  font-weight: bold;
+  transition: 500ms font-size ease;
+}
+
+/***************
+ * MessageList *
+ ***************/
+.message-list {
+  margin: 0 0 0 5px
+}
+
+@media screen and (min-width: 800px) {
+  .message-list {
+    flex-basis: 75%;
+  }
+}
+
+.msg {
+  margin: 30px 0;
+  width: 95%;
+}
+
+.msg-author {
+  display: flex;
+  flex-direction: column;
+}
+
+.msg-avatar {
+  margin: 0 15px 0 0;
+  width: 50px;
+}
+
+.msg-img {
+  display: block;
+  max-width: 500px;
+}
+
+.msg-info {
+  align-items: center;
+  display: flex;
+  min-height: 50px;
+}
+
+.msg-name {
+  flex-basis: 60%;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px 0 0;
+}
+
+.msg-system {
+  font-style: italic;
+}
+
+.msg-time {
+  font-size: 10px;
+}
+
+.msg-txt {
+  margin: 10px 0 0;
+}

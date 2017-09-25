@@ -6,7 +6,7 @@ SECRET_KEY = 'g$cf^=jhk8_015w0acbq@)vf&vz$t7ft0z*w!tk$coyj&9%dxw'
 
 DEBUG = True
 
-ALLOWED_HOSTS = [u'groupme-log.herokuapp.com', u'127.0.0.1']
+ALLOWED_HOSTS = [u'127.0.0.1', u'groupme-log.herokuapp.com']
 
 
 INSTALLED_APPS = (
@@ -82,9 +82,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'assets')
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
-STATIC_URL = '/assets/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'assets'),
