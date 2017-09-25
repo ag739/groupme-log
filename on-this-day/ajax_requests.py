@@ -79,12 +79,12 @@ def getMessages(request):
       date0 = datetime.fromtimestamp(messages[0]["created_at"])
       # check if we're done looping through
       if not isInDateRange(date0, first, month, day):
-        print "{}/{} is no longer in the range of {} - {}".format(month, day, datetime.strftime(first, "%m/%d/%Y"), datetime.strftime(date0, "%m/%d/%Y"))
+        # print "{}/{} is no longer in the range of {} - {}".format(month, day, datetime.strftime(first, "%m/%d/%Y"), datetime.strftime(date0, "%m/%d/%Y"))
         break
       date1 = datetime.fromtimestamp(messages[len(messages)-1]["created_at"])
 
       if isInDateRange(date0, date1, month, day):
-        print "looping through messages in range {} - {}".format(datetime.strftime(date1, "%m/%d/%Y"), datetime.strftime(date0, "%m/%d/%Y"))
+        # print "looping through messages in range {} - {}".format(datetime.strftime(date1, "%m/%d/%Y"), datetime.strftime(date0, "%m/%d/%Y"))
         for message in messages:
 
           m_date = datetime.fromtimestamp(message["created_at"])
