@@ -6,7 +6,7 @@ SECRET_KEY = 'g$cf^=jhk8_015w0acbq@)vf&vz$t7ft0z*w!tk$coyj&9%dxw'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [u'groupme-log.herokuapp.com']
 
 
 INSTALLED_APPS = (
