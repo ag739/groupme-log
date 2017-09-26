@@ -1,9 +1,12 @@
 # GroupMe: On This Day
 
+[View live](https://groupme-log.herokuapp.com/)
+
 Ever use apps like Timehop or Facebook's "On This Day" to see what you were doing however many number of years ago? Have a groupchat on GroupMe that you've been using for several years and want to see what was important to you guys on this day x number of years ago? This is the app for you!
 
 ## To Run
 `"node_modules/.bin/webpack" --config webpack.config.js`
+
 `python manage.py runserver`
 
 ## How It Works
